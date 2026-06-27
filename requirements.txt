@@ -1,0 +1,12 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+asyncpg
+psycopg2-binary
+alembic
+celery
+redis
+openai
+pgvector
+pydantic-settings
+python-dotenv
