@@ -8,13 +8,13 @@ engine = create_async_engine(
     echo=True, # Показывает SQL-запросы в консоли
 )
 
-async_session = sessionmaker(
+async_session = async_sessionmaker(
     engine,
     class_=AsyncSession,
     expire_on_commit=False,
 )
 
-async def get_bd() -> AsyncSession:
+async def get_db() -> AsyncSession:
     """Зависимость для FastAPI: отдает сессию и закрывает по окончании запроса."""
-    async with async_session as session:
+    async with async_session() as session:
         yield session

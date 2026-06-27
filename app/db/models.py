@@ -14,4 +14,4 @@ class Book(Base):
     author = Column(String(300), nullable=False)
     rating = Column(Float, nullable=True)  # Оценка пользователя (1-10)
     review = Column(Text, nullable=True)  # Отзыв
-    created_at = Column(DateTime, default=datetime.utcnow)
+    created_at = Column(DateTime, default=datetime.now())
