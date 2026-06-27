@@ -6,7 +6,7 @@ psycopg2-binary
 alembic
 celery
 redis
-openai
+google-generativeai
 pgvector
 pydantic-settings
 python-dotenv
